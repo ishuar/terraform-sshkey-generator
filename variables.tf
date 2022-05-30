@@ -32,23 +32,23 @@ variable "enable_az_key_vault_secret" {
 }
 variable "resource_group_name" {
   type        = string
-  description = "(optional) Resource group from AKS module"
+  description = "(optional) Resource group in which Key vault and respective resources would be created"
   default     = "kv-auto-ssh-ppk-key"
 }
 variable "location" {
   type        = string
-  description = "(optional) The location where AKS cluster would be deployed"
+  description = "(optional) The location of resource group in which Key vault and associated resources are created"
   default     = "westeurope"
 }
 variable "tags" {
   type        = map(string)
-  description = "(optional) Tags from aks module"
+  description = "(optional) Tags atttached with the resources"
   default     = {}
 }
 variable "ssh_key_vault_name" {
   type        = string
   description = "(optional) Key Vault name where private key would be stored as password"
-  default     = "kv-ssh-key-aks-module"
+  default     = "kv-ssh-key-module"
 }
 variable "enabled_for_disk_encryption" {
   type        = bool
@@ -73,5 +73,5 @@ variable "expiration_date" {
 variable "ssh_kv_secret" {
   type        = string
   description = "(optional) KV secret which contains the ssh ppk generated for aks module"
-  default     = "secret-ppk-aks-module"
+  default     = "secret-ssh-ppk-module"
 }
