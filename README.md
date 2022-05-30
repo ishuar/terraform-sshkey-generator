@@ -45,7 +45,7 @@ No modules.
 | <a name="input_rsa_bits"></a> [rsa\_bits](#input\_rsa\_bits) | (optional)When algorithm is RSA, the size of the generated RSA key, in bits | `number` | `4096` | no |
 | <a name="input_soft_delete_retention_days"></a> [soft\_delete\_retention\_days](#input\_soft\_delete\_retention\_days) | (optional) he number of days that items should be retained for once soft-deleted. | `number` | `7` | no |
 | <a name="input_ssh_key_vault_name"></a> [ssh\_key\_vault\_name](#input\_ssh\_key\_vault\_name) | (optional) Key Vault name where private key would be stored as password | `string` | `"kv-ssh-key-module"` | no |
-| <a name="input_ssh_kv_secret"></a> [ssh\_kv\_secret](#input\_ssh\_kv\_secret) | (optional) KV secret which contains the ssh ppk generated for aks module | `string` | `"secret-ssh-ppk-module"` | no |
+| <a name="input_ssh_kv_secret"></a> [ssh\_kv\_secret](#input\_ssh\_kv\_secret) | (optional) KV secret which contains the ssh ppk | `string` | `"secret-ssh-ppk-module"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | (optional) Tags atttached with the resources | `map(string)` | `{}` | no |
 
 ## Outputs

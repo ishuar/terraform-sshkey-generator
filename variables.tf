@@ -72,6 +72,6 @@ variable "expiration_date" {
 }
 variable "ssh_kv_secret" {
   type        = string
-  description = "(optional) KV secret which contains the ssh ppk generated for aks module"
+  description = "(optional) KV secret which contains the ssh ppk"
   default     = "secret-ssh-ppk-module"
 }
