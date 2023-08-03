@@ -20,7 +20,16 @@ variable "private_key_filename" {
   description = "(optional) Filename for private key saved locally on machine with path"
   default     = "./private_ssh_key"
 }
-
+variable "file_permission" {
+  type        = string
+  description = "(optional) Permissions to set for the output file (before umask), expressed as string in numeric notation. Default value is 0700"
+  default     = "700"
+}
+variable "directory_permission" {
+  type        = string
+  description = "(optional) Permissions to set for directories created (before umask), expressed as string in numeric notation. Default value is 0700"
+  default     = "700"
+}
 ###############
 ###Az KeyVault##
 ###############
