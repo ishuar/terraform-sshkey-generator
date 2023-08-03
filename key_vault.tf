@@ -46,3 +46,11 @@ resource "azurerm_key_vault_secret" "kv_secret" {
     azurerm_key_vault_access_policy.user_access_policy
   ]
 }
+
+# ref: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment
+# resource "azurerm_role_assignment" "this" {
+#   count                = var.enable_rbac_authorization == true && var.rbac_authorization_role != null ? 1 : 0
+#   principal_id         = data.azurerm_client_config.current.object_id
+#   role_definition_name = var.rbac_authorization_role
+#   scope                = azurerm_key_vault.password_key_vault[0].id
+# }
